@@ -14,23 +14,19 @@ import com.example.cafe_api.model.Product;
 @RequestMapping("/products")
 public class ProductController {
 
-    // 🔹 Lista en memoria para simular la base de datos
-    private List<Product> productos = new ArrayList<>();
+    public static List<Product> productos = new ArrayList<>();
 
-    // Constructor: cargamos algunos productos iniciales
     public ProductController() {
         productos.add(new Product(1, "Espresso", 2.50));
         productos.add(new Product(2, "Cappuccino", 3.00));
         productos.add(new Product(3, "Latte", 3.50));
     }
 
-    // GET → listar todos los productos
     @GetMapping
     public ResponseEntity<?> getProducts() {
         return ResponseEntity.ok(productos);
     }
 
-    // POST → agregar un nuevo producto
     @PostMapping
     public ResponseEntity<?> addProduct(@RequestBody Product nuevo) {
         for (Product p : productos) {
@@ -52,7 +48,6 @@ public class ProductController {
                         "producto", nuevo));
     }
 
-    // PUT → actualizar precio del producto
     @PutMapping("/{id}")
     public ResponseEntity<?> updateProduct(@PathVariable int id, @RequestBody Map<String, Object> body) {
         for (Product p : productos) {
@@ -78,7 +73,6 @@ public class ProductController {
                 "error", "Producto con ID " + id + " no encontrado."));
     }
 
-    // DELETE → eliminar producto
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteProduct(@PathVariable int id) {
         for (Product p : productos) {

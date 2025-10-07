@@ -13,7 +13,7 @@ public class Product {
         this.nombre = nombre;
         this.precio = precio;
 
-        System.out.println("Product created: " + this.toString());
+        System.out.println("Producto creado: " + this.toString());
 
     }
 

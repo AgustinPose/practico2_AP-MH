@@ -7,13 +7,15 @@ public class Order {
     private int id;
     private LocalDateTime fecha;
     private List<OrderItem> items;
+    private Double total;
 
     public Order() {}
 
-    public Order(int id, LocalDateTime fecha, List<OrderItem> items) {
+    public Order(int id, LocalDateTime fecha, List<OrderItem> items, double total) {
         this.id = id;
         this.fecha = fecha;
         this.items = items;
+        this.total = total;
     }
 
     public int getId() {
@@ -35,5 +37,13 @@ public class Order {
     }
     public void setItems(List<OrderItem> items) {
         this.items = items;
+    }
+
+    public double getTotal() {
+        return total;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
     }
 }
