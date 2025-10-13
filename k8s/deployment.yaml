@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cafe-api
+  namespace: cafeteria
+  labels:
+    app: cafe-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cafe-api
+  template:
+    metadata:
+      labels:
+        app: cafe-api
+    spec:
+      containers:
+        - name: cafe-api
+          image: cafe-api:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: "default"
