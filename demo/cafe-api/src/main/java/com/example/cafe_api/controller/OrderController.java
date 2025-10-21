@@ -60,6 +60,7 @@ public class OrderController {
 
             Order nueva = new Order(nextId++, LocalDateTime.now(), items, total);
             ordenes.add(nueva);
+            orderMetrics.incrementarPedidosCreados();
 
             return ResponseEntity.status(HttpStatus.CREATED).body(Map.of(
                     "status", 201,
