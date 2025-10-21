@@ -73,7 +73,7 @@ Proyecto de practica DevOps que expone una API de cafeteria escrita con Spring B
 
 # Recursos recomendados
 
-Postman (seleccionar todo el link): https://poseagus15-5718737.postman.co/workspace/Agustin-Pose's-Workspace~05cb38f6-23ba-46d3-87d5-9375f6de3ff1/collection/48467642-5f139450-40bf-45b4-a4aa-1f69ed3bcc17?action=share&creator=48467642
+Postman: https://poseagus15-5718737.postman.co/workspace/Agustin-Pose's-Workspace~05cb38f6-23ba-46d3-87d5-9375f6de3ff1/collection/48467642-5f139450-40bf-45b4-a4aa-1f69ed3bcc17?action=share&creator=48467642
 
 ### Datos de contacto
 
