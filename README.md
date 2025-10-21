@@ -34,7 +34,7 @@ Proyecto de practica DevOps que expone una API de cafeteria escrita con Spring B
 3. Validar metricas de la API en `http://localhost:8080/actuator/prometheus`.
 4. Detener y limpiar: `docker compose down`.
 
-### Despliegue en Kubernetes (opcional)
+### Despliegue en Kubernetes
 
 1. Asegurarse de tener una imagen local `cafe-api:latest`. Si se trabaja en un cluster local (por ejemplo kind o minikube):
    ```bash
@@ -49,7 +49,7 @@ Proyecto de practica DevOps que expone una API de cafeteria escrita con Spring B
    kubectl apply -f k8s/prometheus-deployment.yaml
    kubectl apply -f k8s/grafana-deployment.yaml
    ```
-3. Endpoints expuestos con NodePort (ajustar segun el entorno):
+3. Endpoints expuestos:
    - API: `http://<node-ip>:30080`
    - Prometheus: `http://<node-ip>:30090`
    - Grafana: `http://<node-ip>:30300`
